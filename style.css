@@ -133,3 +133,38 @@ h3 { margin: 0; }
   .tree-wrap { display: block; }
   .wrap { position: relative; z-index: 1; }
 }
+/* phones and tablets: no margin to spare, so the tree gets its own moment
+   after Contact: a small forest where one tree grows above the rest */
+.finale { display: none; height: 220px; margin-top: 2rem; pointer-events: none; }
+.finale-art { width: 100%; height: 100%; display: block; }
+.finale .ground { stroke: #e8e8e8; stroke-width: 1; fill: none; }
+.finale .forest { stroke: var(--accent); stroke-opacity: .2; stroke-width: 1.2; fill: none; stroke-linecap: round; }
+.finale .forest-leaves { fill: var(--accent); fill-opacity: .2; }
+.finale .roots { stroke: var(--accent); stroke-width: 1; fill: none; stroke-linecap: round; opacity: .35; }
+.finale .trunk { fill: var(--accent); }
+.finale .grow { stroke-dasharray: 1; stroke-dashoffset: 0; }
+.finale .limb { fill: none; stroke: var(--accent); stroke-opacity: .75; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
+.finale .twig { stroke-width: 1; }
+.finale .leaves { fill: var(--accent); fill-opacity: .65; }
+@media (max-width: 1199.98px), (max-height: 559.98px) {
+  .finale { display: block; }
+  .wrap { padding-bottom: 6.5rem; }
+  .dock { transition: transform .3s ease, opacity .3s ease; }
+  .dock.away { transform: translate(-50%, calc(100% + 1.5rem)); opacity: 0; }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .finale { height: 280px; }
+}
+@media (max-width: 640px) {
+  .role-sep { display: none; }
+  .learner { display: block; }
+  .row summary { display: grid; grid-template-columns: 36px minmax(0, 1fr) 20px; column-gap: 12px; align-items: start; }
+  .logo { width: 36px; height: 36px; }
+  .row-main { grid-column: 2; }
+  .chev { grid-column: 3; grid-row: 1; margin-top: .55rem; }
+  .row-date { grid-column: 2; grid-row: 2; margin: .1rem 0 0; text-align: left; }
+  .row-body { margin: .75rem 0 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dock { transition: none; }
+}
