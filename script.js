@@ -11,7 +11,7 @@ addEventListener('scroll', updateProgress, {passive:true}); updateProgress();
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && !reduced) { const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:.08}); revealItems.forEach(el => io.observe(el)); } else revealItems.forEach(el => el.classList.add('visible'));
 const typeEl = document.getElementById('typewriter');
-const phrases = ['Rust Programmer.', 'Full-Stack Developer.', 'DevOps Specialist.'];
+const phrases = ['AI & Security Engineer.', 'LLM Agents for SOC.', 'DevOps & Cloud.'];
 if (reduced) { typeEl.textContent = phrases.join(' · '); }
 else { let phrase=0,pos=0,del=false; function tick(){const full=phrases[phrase];typeEl.textContent=full.slice(0,pos);if(!del && pos<full.length)pos++;else if(!del){del=true;setTimeout(tick,1600);return;}else if(pos>0)pos--;else{del=false;phrase=(phrase+1)%phrases.length;}setTimeout(tick,del?42:85);}tick(); }
 const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
