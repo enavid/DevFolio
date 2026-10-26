@@ -129,7 +129,7 @@ h3 { margin: 0; }
 .tree .limb { fill: none; stroke: var(--accent); stroke-opacity: .65; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
 .tree .twig { stroke-width: 1; }
 .tree .leaves { fill: var(--accent); fill-opacity: .42; }
-@media (min-width: 1280px) and (min-height: 700px) {
+@media (min-width: 1200px) and (min-height: 560px) {
   .tree-wrap { display: block; }
   .wrap { position: relative; z-index: 1; }
 }

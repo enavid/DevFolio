@@ -21,7 +21,7 @@ if ('IntersectionObserver' in window) {
 // by the same progress value, so scrolling back up reverses it in order.
 const tree = document.querySelector('.tree');
 if (tree) {
-  const shown = matchMedia('(min-width: 1280px) and (min-height: 700px)');
+  const shown = matchMedia('(min-width: 1200px) and (min-height: 560px)');
   const still = matchMedia('(prefers-reduced-motion: reduce)');
   const TRUNK_END = 0.96;
   const clamp = v => Math.max(0, Math.min(1, v));
