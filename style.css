@@ -168,3 +168,9 @@ h3 { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .dock { transition: none; }
 }
+
+/* Rust: favorite language */
+.skill-groups .fav { border-color: #bbf7d0; background: var(--accent-soft); color: var(--accent); font-weight: 500; display: inline-flex; align-items: center; gap: .35rem; }
+.skill-groups .fav small { font-size: .7rem; opacity: .8; }
+.card-link { margin-top: .35rem; font-size: .85rem; font-weight: 500; color: var(--accent); width: fit-content; }
+.card-link:hover { text-decoration: underline; text-underline-offset: 3px; }
